@@ -47,7 +47,9 @@ ufw allow proto tcp from any to any port 22,80,443
 IFS=', ' read -r -a WHITELIST <<< "$WHITELIST_S"
 
 for IP in "${WHITELIST[@]}"; do
-  ufw allow from "$IP"
+#  ufw allow from "$IP"
+  ufw allow proto tcp from "$IP"
+  ufw allow proto udp from "$IP"
 done
 
 ufw allow from 10.43.0.0/16
