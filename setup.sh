@@ -38,7 +38,7 @@ chmod +x jq-linux64
 mv jq-linux64 /usr/local/bin/jq
 
 
-# Redir a mi version publica
+##jb## Redir a mi version publica
 #curl -o /usr/local/bin/update-config.sh https://raw.githubusercontent.com/vitobotta/hetzner-cloud-init/master/update-config.sh
 curl -o /usr/local/bin/update-config.sh https://raw.githubusercontent.com/AdZoAi/z-hci-update/main/update-config.sh
 chmod +x /usr/local/bin/update-config.sh
@@ -71,9 +71,6 @@ ufw allow proto udp from 10.244.0.0/16
 
 ufw -f default deny incoming
 ufw -f default allow outgoing
-
-# no existia default deny routed
-ufw -f default allow routed
 
 ufw -f enable
 
