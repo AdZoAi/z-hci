@@ -70,8 +70,6 @@ ufw allow proto tcp from 10.244.0.0/16
 ufw allow proto udp from 10.244.0.0/16
 ufw -f default deny incoming
 ufw -f default allow outgoing
-###
-ufw -f default allow router
 
 ufw -f enable
 
