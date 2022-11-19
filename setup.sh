@@ -72,6 +72,9 @@ ufw allow proto udp from 10.244.0.0/16
 ufw -f default deny incoming
 ufw -f default allow outgoing
 
+# no existia default deny routed
+ufw -f default allow routed
+
 ufw -f enable
 
 cat <<EOF >> /etc/crontab
